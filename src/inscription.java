@@ -7,9 +7,15 @@ public class inscription {
         c = c1;
     }
 
-    public void afficheParCour(cours c1){
+    public void affichetd(cours c1){
         if (c1 == c){
-            System.out.println(" -etudiant id: " + e.studentId + "  -nom: " + e.nom + "  -email: "+ e.email);
+            e.affiche_etude();
+        }
+    }
+
+    public void affichecrs(etudiant e1){
+        if(e1 == e) {
+            c.affiche_cour();
         }
     }
 }

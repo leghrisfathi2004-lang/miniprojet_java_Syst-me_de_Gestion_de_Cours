@@ -3,27 +3,33 @@ import java.util.List;
 import java.util.Scanner;
 
 public class cours {
-    int courseId;
-    String titre;
-    String description;
-    instructeur inst;
-
-
     static Scanner input = new Scanner(System.in);
 
-    public cours(int id, String titre, String description){
+    private int courseId;
+    private String titre;
+    private String description;
+    private instructeur inst;
+
+    public cours(int id){
         this.courseId = id;
-        this.description = description;
-        this.titre = titre;
+        System.out.println(" entre la titre de cour: ");
+        this.titre = input.nextLine();
+        System.out.println(" entre la description: ");
+        this.description = input.nextLine();
     }
 
+    public void assignerIns(instructeur i){
+        if (i != null){
+            inst = i;
+            System.out.println("assigner en success!");
+            return;
+        }
+        System.out.println("");
 
-    public void assignerInstructeur(instructeur i){
-        inst = i;
-        System.out.println("assigner en success!");
     }
 
-    public void afficherDetails(){
-
+    public void affiche_cour(){
+        System.out.println(" -cour id: "+courseId+"  -titre: "+titre+"  -decription: "+description);
+        if (inst != null) inst.afficheinst();
     }
 }

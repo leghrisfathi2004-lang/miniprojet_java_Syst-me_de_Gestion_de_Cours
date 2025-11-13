@@ -1,20 +1,21 @@
+import java.util.Scanner;
+
 public class instructeur {
-    int instructeurId;
-    String nom;
-    String speciality;
+    private int instructeurId;
+    private String nom;
+    private String speciality;
+    private static Scanner input = new Scanner(System.in);
 
-    public instructeur(int id, String nom, String spec){
+    public instructeur(int id){
         this.instructeurId = id;
-        this.nom = nom;
-        this.speciality = spec;
+        System.out.println("+ entre le nom: ");
+        this.nom = input.nextLine();
+        System.out.println("entre spicialite: ");
+        this.speciality = input.nextLine();
     }
 
-    public void assignerCours(Cours c){
-
-    }
-
-    public void afficherCours(){
-
+    public void afficheinst(){
+        System.out.println("  ->instructeur id: " + instructeurId + "  -nom: " + nom + "  -specialite: "+ speciality);
     }
 
 

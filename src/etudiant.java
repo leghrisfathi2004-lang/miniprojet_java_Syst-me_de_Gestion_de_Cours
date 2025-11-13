@@ -1,21 +1,21 @@
+import java.nio.file.LinkPermission;
+import java.util.Scanner;
+
 public class etudiant {
-    int studentId;
-    String nom;
-    String email;
+    private static Scanner input = new Scanner(System.in);
+    private int studentId;
+    private String nom;
+    private String email;
 
-    public etudiant(int id, String nom, String email){
+    public etudiant(int id){
         this.studentId = id;
-        this.nom = nom;
-        this.email = email;
+        System.out.println("entre le nom: ");
+        this.nom = input.nextLine();
+        System.out.println("entre l email: ");
+        this.email = input.nextLine();
     }
 
-    public void inscrire(Cours c){
-
+    public void affiche_etude(){
+        System.out.println(" -etudiant id: " + studentId + "  -nom: " + nom + "  -email: "+ email);
     }
-
-    public void afficherCours(){
-
-    }
-
-
 }
